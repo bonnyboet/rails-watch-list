@@ -1,0 +1,14 @@
+<div class="lists">
+
+  <% @lists.each do |list|%>
+  <div class="card">
+    <h2><%= link_to list.name, "/lists/#{list.id}" %></h2>
+  </div>
+  <% end %>
+
+</div>
+  <div class="card">
+    <%= link_to '+ NEW LIST', new_list_path %><br>
+   <p>Photo by <a href="https://unsplash.com/@dmjdenise?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Denise Jans</a> on <a href="https://unsplash.com/s/photos/popcorn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  </p>
+  </div>

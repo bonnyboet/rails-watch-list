@@ -1,2 +1,28 @@
 // Import page-specific CSS files here.
 @import "home";
+
+body {
+  background-image: image-url('hero.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.lists {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+
+  div.card {
+    width: 300px;
+    margin-bottom: 3em;
+  }
+}
+
+.category {
+  align-self: end;
+  background-color: white;
+  padding: 1em;
+  margin-top: 1em;
+  margin-right: 1em
+}
