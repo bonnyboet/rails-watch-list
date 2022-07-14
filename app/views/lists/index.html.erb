@@ -1,10 +1,15 @@
-<div class="lists">
+<div class="lists"
+>
 
   <% @lists.each do |list|%>
-  <div class="card">
-    <h2><%= link_to list.name, "/lists/#{list.id}" %></h2>
-  </div>
+    <div class="card">
+      <h2><%= link_to list.name, "/lists/#{list.id}" %></h2>
+      <% if list.photo.attached? %>
+        <%= cl_image_tag list.photo.key %>
+      <% end %>
+      </div>
   <% end %>
+
 
 </div>
   <div class="card">

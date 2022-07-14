@@ -1,17 +1,20 @@
 
 
 <h2><%= @list.name %></h2>
-<ul>
 
-  <% @bookmarks.each do |bookmark| %>
-  <% movie = Movie.find(bookmark.movie_id)%>
-  <li><%= bookmark.comment %></li>
-  <li><%= movie.title %></li>
-  <%= link_to "Delete", list_bookmark_path(@list, bookmark),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %>
-  <% end %>
+<% @bookmarks.each do |bookmark| %>
+  <div class="card">
+    <% movie = Movie.find(bookmark.movie_id)%>
+    <%= image_tag movie.poster_url, class: "movie" %>
+    <h3><%= movie.title %></h3>
+    <%= bookmark.comment %>
+    <%= link_to "Delete", list_bookmark_path(@list, bookmark),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
+              </div>
+    <% end %>
 </ul>
+
 
 <div class="card">
   <%= link_to '+ NEW BOOKMARK', new_list_bookmark_path(@list) %>

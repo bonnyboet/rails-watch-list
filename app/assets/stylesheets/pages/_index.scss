@@ -2,9 +2,30 @@
 @import "home";
 
 body {
-  background-image: image-url('hero.jpg');
+  background: rgb(2,0,36);
+  background: linear-gradient(336deg, rgba(2,0,36,0.8) 5%, rgba(47,3,33,0.8) 20%, rgba(68,5,32,0.8) 36%, rgba(121,9,29,08) 55%, rgba(105,36,59,0.8) 61%, rgba(0,212,255,0.8) 100%),
+  image-url('hero.jpg');
   background-size: cover;
   background-attachment: fixed;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: #1b011d;
+  text-decoration: none;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    color: #2d84a7;
+    border-bottom: 10px solid #2d84a7;
+    transition: 0.2s ease-in-out;
+  }
 }
 
 .lists {
@@ -16,6 +37,7 @@ body {
   div.card {
     width: 300px;
     margin-bottom: 3em;
+    padding: 1em;
   }
 }
 

@@ -12,7 +12,7 @@ class BookmarksController < ApplicationController
     @bookmark.list = @list
     @bookmark.movie = @movie
 
-    @bookmark.save!
+    @bookmark.save
     redirect_to list_path(@list)
   end
 
@@ -23,6 +23,7 @@ class BookmarksController < ApplicationController
 
     redirect_to list_path(@list)
   end
+  
   private
 
   def bookmark_params
